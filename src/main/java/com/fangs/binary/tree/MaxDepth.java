@@ -25,6 +25,13 @@ public class MaxDepth {
     int curr = 0;
     int maxDepth = 0;
 
+    /**
+     * 自顶向下计算高度
+     *
+     * @param root
+     * @return
+     * @author fangs
+     */
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -38,5 +45,22 @@ public class MaxDepth {
         curr = a;
         maxDepth(root.right);
         return maxDepth;
+    }
+
+
+    /**
+     * 自底向上计算
+     *
+     * @param root
+     * @return
+     * @author fangs
+     */
+    public int maxDepth2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return (left > right ? left : right) + 1;
     }
 }
