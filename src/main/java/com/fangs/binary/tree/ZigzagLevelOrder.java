@@ -44,7 +44,7 @@ public class ZigzagLevelOrder {
     LinkedList<TreeNode> stack = new LinkedList<>();
 
     /**
-     * 解法思路：使用一个双段队列，一头存，一头取。没下一层就存取互换一头
+     * 解法思路：使用一个双段队列，一头存，一头取。每下一层就存取互换一头
      *
      * @param root
      * @return
