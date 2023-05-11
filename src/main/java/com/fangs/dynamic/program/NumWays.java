@@ -28,10 +28,10 @@ public class NumWays {
      * 对步数循环，分别记下那些成员可以1步到终点，2步到终点
      * 本步到终点的方案数 = data[上一步][下一步能传的成员]累加
      *
-     * @param n
-     * @param relation
-     * @param k
-     * @return
+     * @param n        总玩家数
+     * @param relation [玩家编号,对应可传递玩家编号] 关系组成的二维数组
+     * @param k        轮数
+     * @return 返回信息从小 A (编号 0 ) 经过 k 轮传递到编号为 n-1 的小伙伴处的方案数
      * @author fangs
      */
     public int numWays(int n, int[][] relation, int k) {
