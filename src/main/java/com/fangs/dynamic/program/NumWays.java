@@ -1,12 +1,5 @@
 package com.fangs.dynamic.program;
 
-import com.sun.org.apache.regexp.internal.RE;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * LCP 07. 传递信息
  * 小朋友 A 在和 ta 的小伙伴们玩传信息游戏，游戏规则如下：
