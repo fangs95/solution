@@ -52,6 +52,7 @@ public class GenerateParenthesis {
     void add(StringBuilder a, char c, int n, int open, int close, List<String> res) {
         a.append(c);
         if (a.length() == 2 * n) {
+            //优化后不需要单独判断是否合法
 //            if (check(a.toString())) {
             res.add(a.toString());
 //            }
