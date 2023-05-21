@@ -37,7 +37,7 @@ public class LongestPalindrome {
         for (int i = 1; i < charArray.length; i++) {
             boolean isOnce = true;
             int a = i;
-            //最小回文可能是多个相同的字符
+            //最小回文可能是多个连续相同的字符
             while (a < charArray.length && charArray[a] == charArray[a - 1]) {
                 isFind = false;
                 if (isOnce) {
