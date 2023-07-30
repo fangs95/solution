@@ -12,7 +12,7 @@ public class MyQueue {
 //        ["MyQueue","push","push","push","push","pop","push","pop","pop","pop","pop"]
 //        [[],[1],[2],[3],[4],[],[5],[],[],[],[]]
         MyQueue myQueue = new MyQueue();
-        myQueue.push(1);
+        myQueue.push(2);
         myQueue.push(2);
         myQueue.push(3);
         myQueue.push(4);
