@@ -35,7 +35,7 @@ public class QuickSort {
             }
             swap(l,r,p);
         }
-        //将基准值交换到正确位置
+        //将基准值交换到正确位置 123
         swap(b,r,p);
 
         sort(p,b,r-1);
