@@ -30,6 +30,7 @@ public class Permute {
     }
 
     public void backtract(LinkedList<Integer> data, int[] nums) {
+        //决策完了 记录结果
         if (data.size() == nums.length) {
             res.add(new ArrayList<>(data));
         }
