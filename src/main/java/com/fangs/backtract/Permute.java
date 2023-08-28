@@ -37,8 +37,10 @@ public class Permute {
             if (data.contains(num)) {
                 continue;
             }
+            //做决策
             data.add(num);
             backtract(data, nums);
+            //撤销决策
             data.removeLast();
         }
     }
