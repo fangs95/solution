@@ -30,7 +30,7 @@ public class LongestCommonSubsequence {
         for (int i = 0; i < charArray1.length; i++) {
             for (int j = i; j < charArray2.length; j++) {
                 if (charArray1[i] == charArray2[j]) {
-                    data[i + 1][j + 1] = Math.max(data[i][j + 1], data[i + 1][j]) + 1;
+                    data[i + 1][j + 1] = data[i][j] + 1;
                 } else {
                     data[i + 1][j + 1] = Math.max(data[i][j + 1], data[i + 1][j]);
                 }
