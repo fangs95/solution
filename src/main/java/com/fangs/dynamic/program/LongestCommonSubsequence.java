@@ -13,20 +13,35 @@ package com.fangs.dynamic.program;
  */
 public class LongestCommonSubsequence {
 
+    public static void main(String[] args) {
+        String text1 = "bsbininm";
+        String text2 = "jmjkbkjkv";
+        LongestCommonSubsequence demo = new LongestCommonSubsequence();
+
+        System.out.println(demo.longestCommonSubsequence(text1, text2));
+    }
+
     public int longestCommonSubsequence(String text1, String text2) {
-        int m = text1.length(), n = text2.length();
-        int[][] dp = new int[m + 1][n + 1];
-        for (int i = 1; i <= m; i++) {
-            char c1 = text1.charAt(i - 1);
-            for (int j = 1; j <= n; j++) {
-                char c2 = text2.charAt(j - 1);
-                if (c1 == c2) {
-                    dp[i][j] = dp[i - 1][j - 1] + 1;
+        int m = text1.length();
+        int n = text2.length();
+        int[][] data = new int[m + 1][n + 1];
+        char[] charArray1 = text1.toCharArray();
+        char[] charArray2 = text2.toCharArray();
+        for (int i = 0; i < charArray1.length; i++) {
+            for (int j = i; j < charArray2.length; j++) {
+                if (charArray1[i] == charArray2[j]) {
+                    data[i + 1][j + 1] = Math.max(data[i][j + 1], data[i + 1][j]) + 1;
                 } else {
-                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                    data[i + 1][j + 1] = Math.max(data[i][j + 1], data[i + 1][j]);
                 }
             }
         }
-        return dp[m][n];
+        for (int[] datum : data) {
+            for (int i : datum) {
+                System.out.printf(i + " ");
+            }
+            System.out.println();
+        }
+        return data[m][n];
     }
 }
